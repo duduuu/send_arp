@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
+# load MNIST
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("./mnist/data/", one_hot=True)
 
@@ -52,7 +53,6 @@ batch_size = 100
 learning_rate = 0.0002
 train_epoch = 100
 
-# load MNIST
 # networks : generator
 with tf.variable_scope('G'):
     z = tf.placeholder(tf.float32, shape=(None, 128))
